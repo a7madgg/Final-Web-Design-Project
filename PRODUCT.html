@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - YU store</title>
+  <link rel="stylesheet" href="MyStyle.css">
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+  <a href="index.html" class="logo-wrap">
+    <span class="logo-text">YU store</span>
+  </a>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="index.html" class="active">Products</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <button id="themeBtn">Dark Mode</button>
+</div>
+  </header>
+
+  <main class="container page">
+    <h1>Products</h1>
+
+    <input type="text" id="searchInput" placeholder="Search products...">
+
+   <div class="filters">
+  <button onclick="filterProducts('all')">All</button>
+  <button onclick="filterProducts('study')">Study Essentials</button>
+  <button onclick="filterProducts('accessories')">Accessories</button>
+  <button onclick="filterProducts('tech')">Tech Tools</button>
+  <button onclick="filterProducts('clothing')">YU Clothing</button>
+  <button onclick="filterProducts('lab')">Lab Items</button>
+  <button onclick="filterProducts('print')">Printing</button>
+</div>
+
+    <div class="grid" id="productGrid">
+
+  <div class="card product study">
+    <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80" alt="Laptop for studying">
+    <h3>Student Laptop</h3>
+    <p>Reliable laptop for assignments, research, and online classes.</p>
+    <p class="price">3200 SAR</p>
+    <button class="btn">Buy</button>
+  </div>
+
+  <div class="card product study">
+    <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=800&q=80" alt="Scientific calculator">
+    <h3>Scientific Calculator</h3>
+    <p>Essential for math, engineering, and science courses.</p>
+    <p class="price">120 SAR</p>
+    <button class="btn">Buy</button>
+  </div>
+
+  <div class="card product study">
+    <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80" alt="Notebook and stationery">
+    <h3>Notebook Set</h3>
+    <p>High-quality notebooks for lectures and revision notes.</p>
+    <p class="price">35 SAR</p>
+    <button class="btn">Buy</button>
+  </div>
+
+  <div class="card product accessories">
+    <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80" alt="Backpack for university">
+    <h3>Campus Backpack</h3>
+    <p>Comfortable and spacious for books and laptop.</p>
+    <p class="price">150 SAR</p>
+    <button class="btn">Buy</button>
+  </div>
+
+  <div class="card product accessories">
+    <img src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?auto=format&fit=crop&w=800&q=80" alt="Water bottle">
+    <h3>Insulated Water Bottle</h3>
+    <p>Keep your drink cold during long campus days.</p>
+    <p class="price">45 SAR</p>
+    <button class="btn">Buy</button>
+  </div>
+
+  <div class="card product accessories">
+    <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=800&q=80" alt="Power bank">
+    <h3>Power Bank</h3>
+    <p>Portable charger for phones and tablets between classes.</p>
+    <p class="price">89 SAR</p>
+    <button class="btn">Buy</button>
+  </div>
+
+  <div class="card product tech">
+    <img src="https://images.unsplash.com/photo-1545127398-14699f92334b?auto=format&fit=crop&w=800&q=80" alt="USB flash drive">
+    <h3>USB Flash Drive 64GB</h3>
+    <p>Store and transfer projects, reports, and presentations.</p>
+    <p class="price">40 SAR</p>
+    <button class="btn">Buy</button>
+  </div>
+
+  <div class="card product tech">
+    <img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=800&q=80" alt="Wireless mouse">
+    <h3>Wireless Mouse</h3>
+    <p>Easy navigation for long study sessions.</p>
+    <p class="price">65 SAR</p>
+    <button class="btn">Buy</button>
+  </div>
+
+  <div class="card product clothing">
+    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80" alt="University hoodie">
+    <h3>YU Hoodie</h3>
+    <p>Comfortable university-branded hoodie.</p>
+    <p class="price">120 SAR</p>
+    <button class="btn">Buy</button>
+  </div>
+
+  <div class="card product clothing">
+    <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80" alt="University cap">
+    <h3>YU Cap</h3>
+    <p>Simple and stylish cap with university spirit.</p>
+    <p class="price">55 SAR</p>
+    <button class="btn">Buy</button>
+  </div>
+
+  <div class="card product lab">
+    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80" alt="Lab coat">
+    <h3>Lab Coat</h3>
+    <p>Required for chemistry and biology lab sessions.</p>
+    <p class="price">80 SAR</p>
+    <button class="btn">Buy</button>
+  </div>
+
+  <div class="card product print">
+    <img src="https://images.unsplash.com/photo-1568667256549-094345857637?auto=format&fit=crop&w=800&q=80" alt="Printing and binding">
+    <h3>Print & Bind Package</h3>
+    <p>Printing package for reports and graduation projects.</p>
+    <p class="price">25 SAR</p>
+    <button class="btn">Buy</button>
+  </div>
+
+</div>
+  </main>
+
+  <footer>
+    <p>Students name:</p>
+    <p>Ahmad Ghanoum | Saad Abahuss | Faisal Alzeer</p>
+    <p>Course: Fundamentals Web Design - CIS 201</p>
+    <p>© Al Yamamah University 2026</p>
+  </footer>
+
+  <script src="Myjs.js"></script>
+</body>
+</html>
